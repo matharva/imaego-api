@@ -1,0 +1,720 @@
+{
+	"info": {
+		"_postman_id": "862788d2-5795-49ac-ad7f-e4e3228cc24d",
+		"name": "imaego",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "talent",
+			"item": [
+				{
+					"name": "Get talent Content",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8001/talent/get",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"talent",
+								"get"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Talent Content",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "title",
+									"value": "Test 2",
+									"type": "text"
+								},
+								{
+									"key": "content",
+									"value": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+									"type": "text"
+								},
+								{
+									"key": "sequence",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "author",
+									"value": "Karan 3",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8001/talent/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"talent",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update talent content",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "title",
+									"value": "Test",
+									"type": "text"
+								},
+								{
+									"key": "content",
+									"value": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+									"type": "text"
+								},
+								{
+									"key": "sequence",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "author",
+									"value": "Karan 2",
+									"type": "text"
+								},
+								{
+									"key": "id",
+									"value": "f35992fe-1272-431e-8971-58afd86ee4cd",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8001/talent/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"talent",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Talent Content",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "id",
+									"value": "8f99fcfc-c207-4914-8637-ed76e04f43bf",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8001/talent/delete",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"talent",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Images To talent Page",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "type",
+									"value": "IMAGE2",
+									"type": "text"
+								},
+								{
+									"key": "id",
+									"value": "f35992fe-1272-431e-8971-58afd86ee4cd",
+									"type": "text"
+								},
+								{
+									"key": "sequence",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "images",
+									"type": "file",
+									"src": "/C:/Users/User/Downloads/620248.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8001/talent/images/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"talent",
+								"images",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update talent images",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "type",
+									"value": "IMAGE3",
+									"type": "text"
+								},
+								{
+									"key": "id",
+									"value": "b946e0ed-3585-45f9-8f2f-3d541c1bbdae",
+									"type": "text"
+								},
+								{
+									"key": "sequence",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "images",
+									"type": "file",
+									"src": "/C:/Users/User/Pictures/Screenshots/Screenshot (1).png"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8001/talent/images/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"talent",
+								"images",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete images from talent",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "id",
+									"value": "b946e0ed-3585-45f9-8f2f-3d541c1bbdae",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8001/talent/images/delete",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"talent",
+								"images",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Blog",
+			"item": [
+				{
+					"name": "Get Blog Content",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8001/blog/get",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"blog",
+								"get"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Blog Content",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "title",
+									"value": "Test 2",
+									"type": "text"
+								},
+								{
+									"key": "content",
+									"value": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+									"type": "text"
+								},
+								{
+									"key": "sequence",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "author",
+									"value": "Karan 6",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8001/blog/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"blog",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Blog content",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "title",
+									"value": "Test",
+									"type": "text"
+								},
+								{
+									"key": "content",
+									"value": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+									"type": "text"
+								},
+								{
+									"key": "sequence",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "author",
+									"value": "Karan 4",
+									"type": "text"
+								},
+								{
+									"key": "id",
+									"value": "f637cad9-ec0d-46a4-85e7-04a01ddf3380",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8001/blog/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"blog",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Blog Content",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "id",
+									"value": "8f99fcfc-c207-4914-8637-ed76e04f43bf",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8001/talent/delete",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"talent",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add Images to Blog",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "type",
+									"value": "IMAGE2",
+									"type": "text"
+								},
+								{
+									"key": "id",
+									"value": "0ce18871-0510-4b2f-bfbb-601552c14cbb",
+									"type": "text"
+								},
+								{
+									"key": "sequence",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "images",
+									"type": "file",
+									"src": "/C:/Users/User/Pictures/Screenshots/Screenshot (24).png"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8001/blog/images/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"blog",
+								"images",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Blog Images",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "type",
+									"value": "IMAGE3",
+									"type": "text"
+								},
+								{
+									"key": "id",
+									"value": "9cd05d1d-30a9-43c6-8146-e62409b09780",
+									"type": "text"
+								},
+								{
+									"key": "sequence",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "images",
+									"type": "file",
+									"src": "/C:/Users/User/Pictures/Screenshots/Screenshot (32).png"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8001/talent/images/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"talent",
+								"images",
+								"update"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Homepage",
+			"item": [
+				{
+					"name": "Add homepage Data",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjcwNjkwYWZkLTBjZGYtNGIzZC1iOTBjLWVmNDQ5NTIwN2Q2YiIsInR5cGUiOiJhY2Nlc3MiLCJpYXQiOjE2MzUwMTg2NzgsImV4cCI6MTYzNTAxODk3OH0.rEEyG8x5VcEHNKt6cGjyLwl_wEF1h74hrwEVLw-kqz0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "image_id",
+									"value": "7665b1e6-1f5f-4d24-a671-295997b5e73e",
+									"type": "text"
+								},
+								{
+									"key": "data",
+									"value": "{\"link\":\"http://imaego.com/assets/videos/video.mp4\"}",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8011/homepage/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8011",
+							"path": [
+								"homepage",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all homepage Data",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8011/homepage/get",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8011",
+							"path": [
+								"homepage",
+								"get"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete homepage Data",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjcwNjkwYWZkLTBjZGYtNGIzZC1iOTBjLWVmNDQ5NTIwN2Q2YiIsInR5cGUiOiJhY2Nlc3MiLCJpYXQiOjE2MzUwMDE0ODksImV4cCI6MTYzNTAwMTc4OX0.VZ5dRjJNh-w3g6-XgkG3Q_aay04ZQQtts5yL-FuURWw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "homepage_id",
+									"value": "ec9bc0bb-b496-43bf-844e-9ac663ad7613",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8011/homepage/delete",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8011",
+							"path": [
+								"homepage",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Homepage data",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjcwNjkwYWZkLTBjZGYtNGIzZC1iOTBjLWVmNDQ5NTIwN2Q2YiIsInR5cGUiOiJhY2Nlc3MiLCJpYXQiOjE2MzUwMTg2NzgsImV4cCI6MTYzNTAxODk3OH0.rEEyG8x5VcEHNKt6cGjyLwl_wEF1h74hrwEVLw-kqz0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "homepage_id",
+									"value": "ec9bc0bb-b496-43bf-844e-9ac663ad7613",
+									"type": "text"
+								},
+								{
+									"key": "active",
+									"value": "true",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8011/homepage/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8011",
+							"path": [
+								"homepage",
+								"update"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Admin",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "admin@imaego.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "Kungfupanda@imaego",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8011/admin/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8011",
+							"path": [
+								"admin",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

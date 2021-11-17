@@ -1,0 +1,59 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        HEYYYYYYYYYYYYY
+        <input type="file"  name="fileImage"/>
+        <button onclick="send()">Test</button>
+    </body>
+    <script>
+        var setImage;
+        function callImage(e){
+            setImage = e.target.value;
+        }
+
+        document.querySelector('input[type="file"]').addEventListener('change', function() {
+            if (this.files && this.files[0]) {
+                console.log("Images is: ",this.files[0]);
+                setImage = this.files;
+                // set src to blob url
+            }
+        });
+
+
+        function send(){
+            console.log("Test");
+            var formData = new FormData();
+            formData.append("images",setImage[0]);
+            formData.append("title","Bhushan");
+            formData.append("sequence",0);
+            formData.append("imageData",[{
+                type:"Cover",
+                sequence:0
+            }]);
+            formData.append("content","do923jfo983qbv");
+
+            console.log("FormData is: ", formData);
+
+            for (var [key, value] of formData.entries()) { 
+                console.log(key, value);
+            }
+
+            fetch('/blog/add', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(result => {
+                console.log('Success:', result);
+            })
+            .catch(error => {
+                 console.error('Error:', error);
+            });
+
+        }
+
+        
+    </script>
+</html>
